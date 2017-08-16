@@ -1,5 +1,8 @@
 """
 Alien.py
+This is code for Qualification Round of Codejam 2009
+This problem is the one that's about an alien language that has been discovered 
+at Google Labs and so on...
 """
 
 from sys import argv
@@ -63,5 +66,6 @@ if __name__ == "__main__":
     print (cases)
     cases = analyze(f, cases, words)
     newfile = open('output.dat', 'w')
-    for i in range(len(cases)): newfile.write("Case #{0}: {1}\n".format(i + 1, cases[str(i + 1)]))
+    for i in range(len(cases)):
+        newfile.write("Case #{0}: {1}\n".format(i + 1, cases[str(i + 1)]))
     f.close()
