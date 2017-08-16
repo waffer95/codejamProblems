@@ -1,0 +1,38 @@
+"""
+Alien.py
+"""
+
+from sys import argv
+import re
+
+filename = argv[1]
+
+def readLDN(_file):
+    s = _file.readline()
+    l = [int(i) for i in s.split(' ')]
+    return l
+
+def readWords(_file, leng, n_words):
+    words = []
+    for i in range(n_words):
+        words.append(_file.readline().strip('\n'))
+    return words
+
+def readTestCases(_file, n_cases):
+    test_cases = []
+    for i in range(n_cases):
+        test_cases.append(_file.readline().strip('\n'))
+    return test_cases
+
+def analyze(_file, cases, words):
+    
+
+if __name__ == "__main__":
+    f = open(filename, 'rt', newline = '')
+    l, d, n = readLDN(f)
+    words = readWords(f, l, d)
+    cases = readTestCases(f, n)
+    print (l, d, n)
+    print (words)
+    print (cases)
+    f.close()
