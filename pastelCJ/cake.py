@@ -58,7 +58,7 @@ def dist_cake(cake, R, C):
                             break
 
         
-        # searching for the last empty row since the first row to forward
+        # searching for the last empty row since the first row forward
         last_blank_row = None
         for i in range(R):
             if is_empty_row(cake[i]):
