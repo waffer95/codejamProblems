@@ -5,19 +5,6 @@
 
 """
 
-
-# options = {
-#     'up-r': [-1, 1],
-#     'up-l': [-1, -1],
-#     'down-r': [1, 1],
-#     'down-l': [1, -1],
-#     'up': [-1, 0],
-#     'down': [1, 0],
-#     'rigth': [0, 1],
-#     'left': [0, -1]
-#     }
-
-
 def has_empty_cells(some_cake, R, C):
     for i in range(R):
         for j in range(C):
@@ -31,12 +18,6 @@ def is_empty_row(row):
         if elem is not '?':
             is_empty = False
     return is_empty
-
-def there_is_empty_rows(some_cake):
-    for row in some_cake:
-        if is_empty_row(row):
-            return True
-    return False
 
 def dist_cake(cake, R, C):
     while has_empty_cells(cake, R, C):
@@ -65,7 +46,6 @@ def dist_cake(cake, R, C):
                 last_blank_row = i
 
         if last_blank_row is not None:
-            # print("there is an empty row at", last_blank_row)
             if last_blank_row is R - 1:
                 if is_empty_row(cake[last_blank_row - 1]):
                     for jj in range(C):
