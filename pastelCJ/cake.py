@@ -32,8 +32,15 @@ def is_empty_row(row):
             is_empty = False
     return is_empty
 
+def there_is_empty_rows(some_cake):
+    for row in some_cake:
+        if is_empty_row(row):
+            return True
+    return False
+
 def dist_cake(cake, R, C):
     while has_empty_cells(cake, R, C):
+        # searching for letters in the cake
         for i in range(R):
             for j in range(C):
                 if cake[i][j] >= 'A' or cake[i][j] <= 'Z':
@@ -49,23 +56,26 @@ def dist_cake(cake, R, C):
                             cake[i][jj] = cake[i][j]
                         elif cake[i][jj] is not cake[i][j] and cake[i][jj] is not '?':
                             break
-        
-        for i in range(R - 1):
-            if is_empty_row(cake[i][:]):
-                if i is R - 1:
-                    print ("problems in the last row")
 
-                if i - 1 is not R:
-                    if is_empty_row(cake[i + 1][:]):
-                        for jj in range(C):
-                            cake[i][jj] = cake[R-1][jj]
-                if i > 0:
+        
+        # searching for the last empty row since the first row to forward
+        last_blank_row = None
+        for i in range(R):
+            if is_empty_row(cake[i]):
+                last_blank_row = i
+
+        if last_blank_row is not None:
+            # print("there is an empty row at", last_blank_row)
+            if last_blank_row is R - 1:
+                if is_empty_row(cake[last_blank_row - 1]):
                     for jj in range(C):
-                        cake[i][jj] = cake[i - 1][jj]
-                elif i is 0:
+                        cake[last_blank_row][jj] = cake[last_blank_row - 2][jj]
+                else:
                     for jj in range(C):
-                        # i is 0 right here
-                        cake[i][jj] = cake[i + 1][jj]
+                        cake[last_blank_row][jj] = cake[last_blank_row - 1][jj]
+            else:
+                for jj in range(C):
+                    cake[last_blank_row][jj] = cake[last_blank_row + 1][jj]
         
     return cake
 
