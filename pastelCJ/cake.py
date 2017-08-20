@@ -49,18 +49,20 @@ def dist_cake(cake, R, C):
                             cake[i][jj] = cake[i][j]
                         elif cake[i][jj] is not cake[i][j] and cake[i][jj] is not '?':
                             break
+        
         for i in range(R - 1):
-            if is_empty_row(cake[i][:]) and is_empty_row(cake[i + 1][:]):
-                for ii in range(i + 1, R):
-                    if not(is_empty_row(cake[ii][:])):
-                        for jj in range(C):
-                            cake[i][jj] = cake[ii][jj]
-
             if is_empty_row(cake[i][:]):
+                if i is R - 1:
+                    print ("problems in the last row")
+
+                if i - 1 is not R:
+                    if is_empty_row(cake[i + 1][:]):
+                        for jj in range(C):
+                            cake[i][jj] = cake[R-1][jj]
                 if i > 0:
                     for jj in range(C):
                         cake[i][jj] = cake[i - 1][jj]
-                else:
+                elif i is 0:
                     for jj in range(C):
                         # i is 0 right here
                         cake[i][jj] = cake[i + 1][jj]
