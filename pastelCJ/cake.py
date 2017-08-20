@@ -80,7 +80,7 @@ for testcase in range(1, T + 1):
     for row in range(R):
         cake.append(list(input()))
 
-    print ("Case #{0}:".format(testcase))
+    print ("Entry #{0}:".format(testcase))
     for row in cake:
         for cell in row:
             print (cell, end='')
