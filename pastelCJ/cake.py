@@ -70,13 +70,6 @@ for testcase in range(1, T + 1):
     for row in range(R):
         cake.append(list(input()))
 
-    print ("Entry #{0}:".format(testcase))
-    for row in cake:
-        for cell in row:
-            print (cell, end='')
-        print ()
-
-
     # distributing the cake 
     cake = dist_cake(cake, R, C)
 
