@@ -20,8 +20,6 @@ def is_empty_row(row):
     return is_empty
 
 def dist_cake(cake, R, C):
-    #while has_empty_cells(cake, R, C):
-    #print ("entering in loop 'while has_empty_cells(cake, R, C)'")
     # searching for letters in the cake
     for i in range(R):
         for j in range(C):
@@ -70,22 +68,22 @@ def dist_cake(cake, R, C):
 
 ##################### main #####################
 
+if __name__ == '__main__':
+    T = int(input())
 
-T = int(input())
+    for testcase in range(1, T + 1):
+        R, C = input().split(' ')
+        R, C = int(R), int(C)
+        cake = []
+        for row in range(R):
+            cake.append(list(input()))
 
-for testcase in range(1, T + 1):
-    R, C = input().split(' ')
-    R, C = int(R), int(C)
-    cake = []
-    for row in range(R):
-        cake.append(list(input()))
+        # distributing the cake 
+        cake = dist_cake(cake, R, C)
 
-    # distributing the cake 
-    cake = dist_cake(cake, R, C)
-
-    # printing test cases
-    print ("Case #{0}:".format(testcase))
-    for row in cake:
-        for cell in row:
-            print (cell, end='')
-        print ()
+        # printing test cases
+        print ("Case #{0}:".format(testcase))
+        for row in cake:
+            for cell in row:
+                print (cell, end='')
+            print ()
