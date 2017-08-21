@@ -21,6 +21,7 @@ def is_empty_row(row):
 
 def dist_cake(cake, R, C):
     while has_empty_cells(cake, R, C):
+        print ("Entrando en el ciclo 'while has_empty_cells(cake, R, C)'")
         # searching for letters in the cake
         for i in range(R):
             for j in range(C):
