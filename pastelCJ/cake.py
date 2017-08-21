@@ -62,7 +62,6 @@ def dist_cake(cake, R, C):
                         last_non_empty_row = i
                         break
 
-        if last_empty_row is not None:
             for jj in range(C):
                 cake[last_empty_row] = cake[last_non_empty_row]     
         
