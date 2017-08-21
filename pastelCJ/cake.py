@@ -5,19 +5,6 @@
 
 """
 
-
-# options = {
-#     'up-r': [-1, 1],
-#     'up-l': [-1, -1],
-#     'down-r': [1, 1],
-#     'down-l': [1, -1],
-#     'up': [-1, 0],
-#     'down': [1, 0],
-#     'rigth': [0, 1],
-#     'left': [0, -1]
-#     }
-
-
 def has_empty_cells(some_cake, R, C):
     for i in range(R):
         for j in range(C):
@@ -34,6 +21,8 @@ def is_empty_row(row):
 
 def dist_cake(cake, R, C):
     while has_empty_cells(cake, R, C):
+        print ("Entrando en el ciclo 'while has_empty_cells(cake, R, C)'")
+        # searching for letters in the cake
         for i in range(R):
             for j in range(C):
                 if cake[i][j] >= 'A' or cake[i][j] <= 'Z':
@@ -49,21 +38,25 @@ def dist_cake(cake, R, C):
                             cake[i][jj] = cake[i][j]
                         elif cake[i][jj] is not cake[i][j] and cake[i][jj] is not '?':
                             break
-        for i in range(R - 1):
-            if is_empty_row(cake[i][:]) and is_empty_row(cake[i + 1][:]):
-                for ii in range(i + 1, R):
-                    if not(is_empty_row(cake[ii][:])):
-                        for jj in range(C):
-                            cake[i][jj] = cake[ii][jj]
 
-            if is_empty_row(cake[i][:]):
-                if i > 0:
+        
+        # searching for the last empty row since the first row forward
+        last_blank_row = None
+        for i in range(R):
+            if is_empty_row(cake[i]):
+                last_blank_row = i
+
+        if last_blank_row is not None:
+            if last_blank_row is R - 1:
+                if is_empty_row(cake[last_blank_row - 1]):
                     for jj in range(C):
-                        cake[i][jj] = cake[i - 1][jj]
+                        cake[last_blank_row][jj] = cake[last_blank_row - 2][jj]
                 else:
                     for jj in range(C):
-                        # i is 0 right here
-                        cake[i][jj] = cake[i + 1][jj]
+                        cake[last_blank_row][jj] = cake[last_blank_row - 1][jj]
+            else:
+                for jj in range(C):
+                    cake[last_blank_row][jj] = cake[last_blank_row + 1][jj]
         
     return cake
 
@@ -77,13 +70,6 @@ for testcase in range(1, T + 1):
     cake = []
     for row in range(R):
         cake.append(list(input()))
-
-    print ("Case #{0}:".format(testcase))
-    for row in cake:
-        for cell in row:
-            print (cell, end='')
-        print ()
-
 
     # distributing the cake 
     cake = dist_cake(cake, R, C)
