@@ -14,5 +14,6 @@ All problems all implemented in Python by now.
 
 ### Solving now:
 
-* Problem A from Qualification Round 2008
+* Problem A from Qualification Round 2008.
+
 Ok, I have something with the A problems :v 
