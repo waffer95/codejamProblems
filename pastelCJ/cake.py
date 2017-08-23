@@ -5,13 +5,6 @@
 
 """
 
-def has_empty_cells(some_cake, R, C):
-    for i in range(R):
-        for j in range(C):
-            if some_cake[i][j] is '?':
-                return True
-    return False
-
 def is_empty_row(row):
     is_empty = True
     for elem in row:
@@ -37,7 +30,7 @@ def dist_cake(cake, R, C):
                     elif cake[i][jj] is not cake[i][j] and cake[i][jj] is not '?':
                         break
 
-    while has_empty_cells(cake, R, C):
+    while '?' in cake:
         # searching for the last empty row since the first row forward
         last_empty_row = None
         for i in range(R):
