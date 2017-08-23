@@ -1,6 +1,8 @@
 # codejamProblems
-
 ## Some random codejam problems for practice
+
+All problems all implemented in Python by now.
+
 
 ### In this repository I have solved by now:
 
@@ -10,3 +12,7 @@
 * Problem A from Qualification Round 2010 (Store Credit)
 
 
+### Solving now:
+
+* Problem A from Qualification Round 2008
+Ok, I have something with the A problems :v 
