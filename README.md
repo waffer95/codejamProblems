@@ -10,10 +10,12 @@ All problems all implemented in Python by now.
 * Problem A from Qualification Round 2009 (Alien Language)
 * Problem A from Round 1A 2008 (Minimum Scalar Product)
 * Problem A from Qualification Round 2010 (Store Credit)
-
+* Problem A from Qualification Round 2016 (Counting Sheep)
 
 ### Solving now:
 
 * Problem A from Qualification Round 2008.
+* Problem B from Qualification Round 2008. 
+
 
 Ok, I have something with the A problems :v 
