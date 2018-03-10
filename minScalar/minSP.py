@@ -1,7 +1,21 @@
 """
 minSP.py
 
+<<<<<<< HEAD
 Problem from Google Codejam Round 1A 2008
+=======
+problem from Google Codejam Round 1A 2008
+
+I use here a new approach for the inputs
+
+They have been asked to the user but I input the data
+from the input files from the cli like this
+
+python program.py < input.dat
+
+I was surprised when I found out that you can do this! :) 
+
+>>>>>>> d8d4fcdcb2176710dcf1af5df34f04a8df71f79d
 
 """
 

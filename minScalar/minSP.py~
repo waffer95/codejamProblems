@@ -1,0 +1,35 @@
+from sys import argv
+
+if len(argv) == 2:
+    fname = argv[1]
+else:
+    fname = 'input.dat'
+    
+file_in = open(fname, 'r')
+file_out = open('out.dat', 'w')
+
+
+N = int(file_in.readline())
+
+i = 1
+for testcase in range(N):
+    n = int(file_in.readline())
+    x = file_in.readline().split(' ')
+    y = file_in.readline().split(' ')
+    if len(x) != len(y):
+        print("Epa: len(x) != len(y)")
+        break
+    for i in range(n):
+        x[i] = int(x[i])
+        y[i] = int(y[i])
+    x.sort()
+    y.sort()
+    y.reverse()
+    sum = 0
+    for i in range(n):
+        sum += x[i] * y[i]
+    print("Case #{0}: {1}".format(i, sum), file = file_out)
+    i += 1
+
+file_in.close()
+file_out.close()

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 """
 Google Codejam Qualification Round 2016; Problem A; Counting Sheep
 by DelkysWelffer
 """
+=======
+>>>>>>> d8d4fcdcb2176710dcf1af5df34f04a8df71f79d
 
 digits = {'0': 0,'1': 0,'2': 0,'3': 0,'4': 0,'5': 0,'6': 0,'7': 0,'8': 0,'9': 0}
 

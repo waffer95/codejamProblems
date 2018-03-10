@@ -1,7 +1,12 @@
 """
 Alien.py
 This is code for Qualification Round of Codejam 2009
+<<<<<<< HEAD
 Alien Language
+=======
+This problem is the one that's about an alien language that has been discovered 
+at Google Labs and so on...
+>>>>>>> d8d4fcdcb2176710dcf1af5df34f04a8df71f79d
 """
 
 from sys import argv

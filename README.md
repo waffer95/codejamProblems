@@ -6,6 +6,7 @@ All problems all implemented in Python by now.
 
 ### In this repository I have solved by now:
 
+<<<<<<< HEAD
 * Problem A from Qualification Round 2008 (Savin Universe)
 * Problem A from Qualification Round 2009 (Alien Language)
 * Problem A from Qualification Round 2010 (Store Credit)
@@ -22,5 +23,18 @@ All problems all implemented in Python by now.
 
 * Problem B from Qualification Round 2008.
 * Problem D from Qualification Round 2016.
+=======
+* Problem A from Round 1A 2017 (Alphabet Cake)
+* Problem A from Qualification Round 2009 (Alien Language)
+* Problem A from Round 1A 2008 (Minimum Scalar Product)
+* Problem A from Qualification Round 2010 (Store Credit)
+* Problem A from Qualification Round 2016 (Counting Sheep)
+
+### Solving now:
+
+* Problem A from Qualification Round 2008.
+* Problem B from Qualification Round 2008. 
+
+>>>>>>> d8d4fcdcb2176710dcf1af5df34f04a8df71f79d
 
 Ok, I have something with the A problems :v 

@@ -1,5 +1,11 @@
 """
+<<<<<<< HEAD
 Google Codejam 2017 Round 1A; Problem A; Alphabet Cake
+=======
+	cake.py
+
+	Problem from Google Codejam 2017 Round 1A; Alphabet Cake
+>>>>>>> d8d4fcdcb2176710dcf1af5df34f04a8df71f79d
 
 """
 
