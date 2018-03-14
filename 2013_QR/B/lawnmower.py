@@ -6,12 +6,24 @@ by DelkysWelffer
 def solve(lawn, N, M):
 	if N == 1 or M == 1:
 		return "YES"
-	# let's check those rows... and columns
+
+	internals = set()
 	for i in range(1, N - 1):
 		for j in range(1, M - 1):
-			if lawn[i][j] < lawn[i][0] or lawn[i][j] < lawn[i][N - 1]:
-				return "NO"
-			if lawn[j][i] < lawn[j][0] or lawn[j][i] < lawn[j][M - 1]:
+			internals.add(lawn[i][j])
+			
+	externals = set()
+	for row in lawn:
+		externals.add(row[0])
+		externals.add(row[-1])
+	for chunk in lawn[0]:
+		externals.add(chunk)
+	for chunk in lawn[-1]:
+		externals.add(chunk)
+		
+	for internal in internals:
+		for external in externals:
+			if internal < external:
 				return "NO"
 
 	return "YES"
