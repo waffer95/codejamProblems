@@ -4,7 +4,7 @@ by DelkysWelffer
 """
 
 def define_status(board):
-    
+
     # look for winners rows
     for i in range(4):
         x_count_row = 0
@@ -80,4 +80,5 @@ def define_status(board):
 if __name__ == "__main__":
     for T in range(1, int(input()) + 1):
         board = [list(input()) for _ in range(4)]
+        input()
         print ("Case #{}: {}".format(T, define_status(board)))
